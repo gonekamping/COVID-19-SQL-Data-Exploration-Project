@@ -1,0 +1,4 @@
+SELECT c.customer_id, c.marital, s.reliability
+FROM customer AS c
+LEFT JOIN survey_responses AS s
+ON c.customer_id=s.customer_id;

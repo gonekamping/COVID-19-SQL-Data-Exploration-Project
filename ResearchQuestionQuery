@@ -1,0 +1,6 @@
+SELECT c.marital, ROUND(AVG(s.reliability),2) AS avg_reliability
+FROM customer AS c
+LEFT JOIN survey_responses AS s
+ON c.customer_id=s.customer_id
+GROUP BY c.marital
+ORDER BY avg_reliability;
